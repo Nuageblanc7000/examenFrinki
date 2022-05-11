@@ -39,6 +39,23 @@ class AnnoncesRepository extends ServiceEntityRepository
         }
     }
 
+
+
+    public function findByFilter($price)
+    {
+        $query = $this
+            ->createQueryBuilder('a')
+            ->select('a');
+            if($price)
+            {
+               $query = $query
+               ->andWhere('a.price >= :price' )
+                ->setParameter('price',$price)
+                ;
+            }
+            return  $query->getQuery()->getResult();
+             
+    }
 //    /**
 //     * @return Annonces[] Returns an array of Annonces objects
 //     */
