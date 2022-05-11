@@ -37,6 +37,10 @@ class Annonces
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $coverImage;
 
+    public function __construct()
+    {
+        $this->createdAt = new \DateTimeImmutable();
+    }
     public function getId(): ?int
     {
         return $this->id;

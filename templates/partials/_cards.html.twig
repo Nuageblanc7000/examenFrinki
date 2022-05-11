@@ -1,24 +1,24 @@
 {% for annonce in annonces %}
 
 					<div class="card-frinki">
-						<div class="c-f-image" style="background-image:url('{{}}');"></div>
+						<div class="c-f-image" style="background-image:url('{{annonce.coverImage}}');"></div>
 						<div class="c-f-content">
 							<div class="c-f-title">
-								<h3>{{}}</h3>
+								<h3>{{annonce.title}}</h3>
 							</div>
 							<div class="c-f-size-price">
 								<div class="c-f-size">
 									<p>
-										<span>S</span>
+										<span>{{annonce.state}}</span>
 									</p>
 								</div>
 								<div class="c-f-price">
-									<p>80<span>€</span>
+									<p>{{annonce.price}}<span>€</span>
 									</p>
 								</div>
 							</div>
 							<div class="c-f-text">
-								<p>{{}}
+								<p>{{annonce.description | slice(0, 45) }}
 									...</p>
 							</div>
 							<div class="c-f-user">

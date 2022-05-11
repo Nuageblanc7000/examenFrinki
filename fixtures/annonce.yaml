@@ -1,0 +1,9 @@
+App\Entity\Annonces:
+  annonce{1..10}:
+    title: <title()>
+    description: <text()>
+    price: <numberBetween(5,100)>
+    state: "neuf"
+    city: <city()>
+    delivry: "envoi"
+    coverImage: "https://picsum.photos/<numberBetween(5,200)>/500"
