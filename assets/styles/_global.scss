@@ -1,0 +1,107 @@
+.spacer-t{
+    padding: 13rem;
+}
+
+.spacer-title{
+    padding:3rem 0 3rem 0;
+}
+.vh100{
+    min-height:100vh;
+}
+.vh50{
+    min-height:100vh;
+}
+.spacer-m-xy{
+    margin-top:3rem;
+    margin-bottom:3rem;
+}
+%overlay{
+    position: sticky;
+    top:0;
+}
+.overlay-01{
+    @extend %overlay;
+    z-index: 2;
+}
+.overlay-02{
+    @extend %overlay;
+    z-index: 4;
+}
+.overlay-03{
+    position: relative;
+    z-index: 10;
+}
+.overlay-04{
+    @extend %overlay;
+    z-index: 12;
+}
+
+//texte-color
+
+.t-c-w{
+    color:$white;
+}
+
+.t-c-o{
+    color:$orange;
+}
+
+//texte centrage
+
+.text-center
+{
+    text-align: center;
+}
+
+//display
+.d-flex{
+    display: flex;
+}
+.flex-col
+{
+    flex-direction: column;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+//grid
+.grid-auto
+{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    gap:5px;
+}
+.col-reverse{
+    flex-direction: column-reverse;
+}
+//background
+.bg-orange
+{
+    background-color: $orange;
+}
+.bg-blue
+{
+    background-color: $blue-mat;
+}
+
+.fs-i{
+    font-size:2rem;
+}
+.fs-1-5 {
+    font-size:1.5rem;
+    
+}
+.p-tb{
+    padding: 0.4rem 0 0.4rem 0;
+}
+
+
+//position
+
+.abs{
+    position: absolute;
+}
+.rela{
+    position: relative;
+}

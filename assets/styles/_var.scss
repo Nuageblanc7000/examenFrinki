@@ -1,0 +1,57 @@
+
+$font-size:62.5%;
+
+//size title
+$h1:5rem;
+$h2:3.5rem;
+$h3:2.3rem; 
+$h4:2rem;
+$h5:1.8rem;
+$special-annonce:calc($h2); 
+//font text size
+$p:1.7rem;
+// lien
+
+
+//font-family
+$font-f-title:'arial';
+$font-title-main:'Racing Sans One', cursive;
+
+
+//white
+$background:#FFFFFF;
+$white:#F8F8F8;
+$color-font:#585B56;
+$footer-color:#5438DC;
+$blue-mat: #1A1423;
+$blue-mauve:#2e1c49;
+//orange
+$orange:#D28253;
+$opacity-orange:rgba(210, 130, 83, 0.507);
+$shadow-orange:0px 0px 10px -1px $orange;
+//blue
+$blue:#5438DC;
+$shadow-blue:0px 0px 10px -1px $blue;
+//black
+$shadow-black: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//btn attribute
+$btn-radius:4px;
+$btn-width:10.2rem;
+$btn-trans:0.5s;
+$btn-padding:0.36rem 0.86rem;
+//btn color
+$btn-hover:$orange;
+$btn-background:$white;
+$btn-shadow-blue:$shadow-blue;
+$btn-shadow-orange:$shadow-orange;
+$btn-shadow-black:0px 4px 4px rgba(0, 0, 0, 0.25);
+$btn-text-color-hover:white;
+$btn-text-color:black;
+
+//btn cube
+
+$btn-cube-width:0.42rem;
+$btn-cube-padding:0.35rem 0.35rem; 
+
+//shapes
+$circle:50%;

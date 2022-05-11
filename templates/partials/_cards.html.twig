@@ -1,0 +1,37 @@
+{% for annonce in annonces %}
+
+					<div class="card-frinki">
+						<div class="c-f-image" style="background-image:url('{{}}');"></div>
+						<div class="c-f-content">
+							<div class="c-f-title">
+								<h3>{{}}</h3>
+							</div>
+							<div class="c-f-size-price">
+								<div class="c-f-size">
+									<p>
+										<span>S</span>
+									</p>
+								</div>
+								<div class="c-f-price">
+									<p>80<span>€</span>
+									</p>
+								</div>
+							</div>
+							<div class="c-f-text">
+								<p>{{}}
+									...</p>
+							</div>
+							<div class="c-f-user">
+								<div class="badge-full">
+									<a class="badge-user" href="#">
+										<img src="{{ asset('build/images/femme.jpg') }}" alt="">
+									</a>
+									<h4>User name</h3>
+								</div>
+							</div>
+							<div class="c-f-v">
+								<a href="" class="btn-blue">Voir l'annonce</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}

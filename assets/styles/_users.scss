@@ -1,0 +1,32 @@
+//badger
+%badge{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.badge-circle-annonce{
+ @extend %badge;
+ width:24rem;
+ min-height:24rem;
+ border-radius: 50%;
+ @extend %circle-box-after;
+}
+
+.badge-user
+{
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50PX;
+    overflow: hidden;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+.badge-full{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

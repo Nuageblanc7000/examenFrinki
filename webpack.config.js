@@ -21,6 +21,16 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
+    .addEntry('home', './assets/home.js')
+    /**
+     * permet de copier mon dossiers images dans build eet le pattern de gérer les extensions autorisées et le to de spécifier ou stocker le fichier
+     */
+    .copyFiles({
+        from: './assets/images',
+        pattern: /\.(png|jpg|jpeg|svg)$/,
+        // le chemin ou je veux mettres mes images
+        to: 'images/[path][name].[ext]'
+    } )
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
@@ -56,7 +66,8 @@ Encore
     })
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
+    .enablePostCssLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

@@ -1,0 +1,60 @@
+%btn{
+    padding:$btn-padding;
+    min-width:$btn-width;
+    border:none;
+    border-radius: $btn-radius;
+    transition: $btn-trans;
+    color:$color-font;
+    background: $btn-background;
+    &:hover{
+        background: $orange;
+        color:$btn-text-color-hover;
+    }
+}
+%btn-cube{
+    padding:$btn-cube-padding;
+    // line-height: 50px;
+    border:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 40px;
+    // margin:10px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: $btn-radius;
+    transition: $btn-trans;
+    color:$color-font;
+    background: $btn-background;
+    
+    &:hover i{
+        color:$white;
+    }
+    i{
+        color:black;
+    }
+    &:hover{
+        background: $orange;
+        color:$btn-text-color-hover;
+    }
+}
+.btn-cube-black{
+    @extend %btn-cube;
+    box-shadow: $btn-shadow-blue;
+}
+.btn-cube-orange{
+    @extend %btn-cube;
+    box-shadow: $btn-shadow-orange;
+}
+
+.btn-orange{
+    @extend %btn;
+    box-shadow: $btn-shadow-orange;
+
+}
+.btn-blue{
+    @extend %btn;
+    box-shadow: $btn-shadow-blue;
+
+}

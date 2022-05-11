@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+
+	<section class="container-fluid banner" style="background:url('build/images/shoesBack.jpg') center center; background-size:cover;">
+		<h1> 
+        {% trans %}
+             Frinki Your Free Ad Service
+        {% endtrans %} 
+            <span> {% trans %} Ad Service {% endtrans %}</span>
+		</h1>
+	</section>
+
+	<section class="container-fluid p-0 d-flex  align-items-center spacer-m-xy">
+		<section class="container-fluid box-color">
+			<div class="row">
+				<div class=" p-0 col-lg-6 col-md-12 col-xs-12 box-background" style="background:url('build/images/femme.jpg') center center; background-size:cover;"></div>
+				<div class="p-0 col-lg-6 col-md-12 col-xs-12 d-flex flex-column">
+					<div class="title-box">
+						<h2>
+                        {% trans %}
+							About
+                        {% endtrans %}
+						</h2>
+					</div>
+					<div class="box-text">
+						<h3 class="spacer-title">
+                            {% trans %}
+                                Frinki is above all
+                            {% endtrans %}
+							<span class="d-block c-f-o">
+                                {% trans %}	
+                                fashion love
+                                {% endtrans %}
+							</span>
+						</h3>
+						<p class="">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							                            Varius suspendisse nunc, vestibulum vel risus, cursus. 
+							                            In elit ultrices mi, iaculis imperdiet tempus, sit. Felis,
+							                            dui vitae purus sed id gravida.
+							                            Sit eu in semper cras netus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							                            Varius suspendisse nunc, vestibulum vel risus, cursus. 
+							                            In elit ultrices mi, iaculis imperdiet tempus, sit. Felis,
+							                            dui vitae purus sed id gravida.
+							                            Sit eu in semper cras netus nec.
+						</p>
+						<div class="box-btn">
+							<a href="" class="btn-blue">
+								{% trans %}
+                                learn more
+                                {% endtrans %}
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<!--Nouvelle annonce-->
+	<section class="container-fluid banner-middle spacer-m-xy box-circle-bottom">
+		<div class="container">
+			<div class="row pb-4 pt-4">
+				<h2 class="pb-5 t-c-w pt-3"> {% trans %} new {% endtrans %} 
+					<span class="t-c-o">{% trans %} ad {% endtrans %}</span>
+				</h2>
+
+				<div class="row pb-5 pt-5">
+					<div class="col-sm-6 col-md-6 col-lg-6 d-flex align-items-center">
+						<div class="badge-circle-annonce" style="background:url('build/images/femme.jpg') center center; background-size:cover;"></div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<h3 class="py-2 t-c-w">Louise Mailart</h3>
+						<h4 class="py-1 t-c-o">Chaussure nike à vendre</h4>
+						<p class="t-c-w">
+							Varius suspendisse nunc, vestibulum vel risus, cursus. 
+							                                In elit ultrices mi, iaculis imperdiet tempus, sit. Felis...
+						</p>
+						<div class="mt-5 mb-5">
+							<a href="" class="btn-orange">
+                                {% trans %}
+                                look ad
+                                {% endtrans %}
+                            </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--annonce rescente-->
+	<section class="container-fluid">
+		<h2 class="text-center">
+        {% trans %}
+        rescent
+        {% endtrans %}
+			<span class="t-c-o">
+			{% trans %}
+			ad
+			{% endtrans %}
+			</span>
+		</h2>
+		<div class="container spacer-m-xy">
+			<div class="grid-auto">
+		    	{# {% include "partials/_cards.html.twig" %} #}
+			</div>
+		</div>
+	</section>
+{% endblock %}

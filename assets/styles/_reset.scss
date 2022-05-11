@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    // padding: 0;
+}
+body,html{
+    font-size: $font-size;
+    
+    background: $white;
+}
+body,html
+{
+    overflow-x:hidden ;
+
+}

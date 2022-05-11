@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>nouvelle</target>
+      </trans-unit>
+      <trans-unit id="cLozcIy" resname="ad">
+        <source>ad</source>
+        <target>annonce</target>
+      </trans-unit>
+      <trans-unit id="pCYuHJv" resname="about">
+        <source>about</source>
+        <target>à propos</target>
+      </trans-unit>
+      <trans-unit id="RM9v.h6" resname="Useful links">
+        <source>Useful links</source>
+        <target>liens utiles</target>
+      </trans-unit>
+      <trans-unit id="9Capzra" resname="Frinki is an ad service&#10;&#9;&#9;&#9;&#9;&#9;created on 05/10/2022 in Belgium">
+        <source>Frinki is an ad service
+					created on 05/10/2022 in Belgium</source>
+        <target>Frinki est un service d'annonce crée le 10/05/2022 en Belgique</target>
+      </trans-unit>
+      <trans-unit id="vcE4eGz" resname="2022 Created by Wetterene Rémy">
+        <source>2022 Created by Wetterene Rémy</source>
+        <target>2022 Création Wetterene Rémy</target>
+      </trans-unit>
+      <trans-unit id="KXRm1Nb" resname="General user condition">
+        <source>General user condition</source>
+        <target>condition générale utilisateur</target>
+      </trans-unit>
+      <trans-unit id="rTY8dvF" resname="Frinki Your Free Ad Service">
+        <source>Frinki Your Free Ad Service</source>
+        <target>Frinki votre service</target>
+      </trans-unit>
+      <trans-unit id="lWSn.aB" resname="Ad Service">
+        <source>Ad Service</source>
+        <target>d'annonce gratuite</target>
+      </trans-unit>
+      <trans-unit id="Tvyg0Qx" resname="About">
+        <source>About</source>
+        <target>A propos</target>
+      </trans-unit>
+      <trans-unit id="EtrXXW." resname="Frinki is above all">
+        <source>Frinki is above all</source>
+        <target>__Frinki is above all</target>
+      </trans-unit>
+      <trans-unit id="3UaHkyU" resname="fashion love">
+        <source>fashion love</source>
+        <target>__fashion love</target>
+      </trans-unit>
+      <trans-unit id="0gMSvIA" resname="learn more">
+        <source>learn more</source>
+        <target>en savoir plus</target>
+      </trans-unit>
+      <trans-unit id="bTOSoPA" resname="look ad">
+        <source>look ad</source>
+        <target>voir l'annonce</target>
+      </trans-unit>
+      <trans-unit id=".G5Y2Dx" resname="rescent">
+        <source>rescent</source>
+        <target>réscente</target>
+      </trans-unit>
+      <trans-unit id="ACcM9j_" resname="logout">
+        <source>logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="JBkykGe" resname="search">
+        <source>search</source>
+        <target>Annonces</target>
+      </trans-unit>
+      <trans-unit id="SNfFCMw" resname="sign-in">
+        <source>sign-in</source>
+        <target>Inscription</target>
+      </trans-unit>
+      <trans-unit id="fwNIweL" resname="log in">
+        <source>log in</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="eOYiezy" resname="Annonces">
+        <source>Annonces</source>
+        <target>__Annonces</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

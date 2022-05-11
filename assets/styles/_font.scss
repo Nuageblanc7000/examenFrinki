@@ -1,0 +1,35 @@
+//font-title
+h1{
+   font-size: $h1;
+    font-family: $font-title-main;
+}
+
+h2{
+    font-size: $h2;
+    font-family: $font-title-main;
+}
+h3{
+    font-size: $h3;
+}
+h4{
+    font-size: $h4;
+}
+h5{
+    font-size: $h5;
+}
+//paragraphe
+p,a,input,select
+{
+    font-size: $p;
+}
+p
+{
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+}
+
+label
+{
+    font-size: 1.8rem;
+}
+

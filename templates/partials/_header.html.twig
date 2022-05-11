@@ -1,0 +1,83 @@
+<header>
+	<nav class="container d-flex justify-content-between align-items-center">
+		<div class="header">
+			<a href="{{path('home')}}">
+				<h1 class="t-c-w">Frinki</h1>
+			</a>
+		</div>
+		<div class="row nav-main">
+			<div class="btn-cube-black burger">
+				<i class='bx bx-menu-alt-right'></i>
+			</div>
+			<div class="nav-child">
+				<span class="close">
+					<i class='bx bxs-arrow-from-right'></i>
+				</span>
+				<ul class="d-flex justify-content-around rela">
+
+					{% if is_granted('AUTHENTICATED_FULLY') %}
+
+						<li class="rela">
+							<a class="btn-cube-black" href="#">
+								<i class='bx bx-log-out-circle'></i>
+								<div class="btn-nav-h abs">
+									<p>
+										{% trans %}
+										logout
+										{% endtrans %}
+									</p>
+								</div>
+							</a>
+						</li>
+					{% else %}
+						<li class="rela op">
+							<a class="btn-cube-black" href="#">
+								<i class='bx bx-store'></i>
+								<div class="btn-nav-h abs">
+									{% trans %}
+									Annonces
+									{% endtrans %}
+								</div>
+							</a>
+
+						</li>
+						<li class="rela op">
+							<a class="btn-cube-black" href="#">
+								<i class='bx bxs-edit'></i>
+								<div class="btn-nav-h abs">
+									{% trans %}
+									sign-in
+									{% endtrans %}
+								</div>
+							</a>
+						</li>
+
+						<li class="rela op">
+							<a class="btn-cube-black" href="#">
+								<i class='bx bx-user'></i>
+								<div class="btn-nav-h abs">
+									{% trans %}
+									log in
+									{% endtrans %}
+								</div>
+							</a>
+						</li>
+						<li class="info-user">
+							<a class="" href="#">
+								<figure>
+									<img class="badge-user" src="build/images/test.png" alt="">
+									<figcaption class="d-none">Sara Boudhan</figcaption>
+								</figure>
+							</a>
+						</li>
+					{% endif %}
+
+				</ul>
+				<figure class="logo-burger">
+					<img src="build/images/vector.png" alt="">
+				</figure>
+			</div>
+
+		</div>
+	</nav>
+</header>
