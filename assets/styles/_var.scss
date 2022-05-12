@@ -31,7 +31,8 @@ $opacity-orange:rgba(210, 130, 83, 0.507);
 $shadow-orange:0px 0px 10px -1px $orange;
 //blue
 $blue:#5438DC;
-$shadow-blue:0px 0px 10px -1px $blue;
+
+$shadow-blue:0px 0px 10px -1px #5338dc5b;
 //black
 $shadow-black: 0px 4px 4px rgba(0, 0, 0, 0.25);
 //btn attribute
@@ -55,3 +56,6 @@ $btn-cube-padding:0.35rem 0.35rem;
 
 //shapes
 $circle:50%;
+
+//card
+$card-color: #fff;

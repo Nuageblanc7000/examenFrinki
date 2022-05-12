@@ -1,17 +1,35 @@
 <?php 
 
 namespace App\Data;
+
+use phpDocumentor\Reflection\Types\Integer;
+
 /**
  * cette classe va servir pour remplir mes filtre.
  * 
+ * 
  */
 final class DataFilter {
+    private $page;
     
-    private $search = null;
+    private $search;
 
     private  $price;
 
     private  $state;
+
+
+    public function getPage(): ?int
+    {
+        return $this->page;
+    }
+
+    public function setPage(string $page): self
+    {
+        $this->page = $page;
+
+        return $this;
+    }
     
     public function getSearch(): ?string
     {

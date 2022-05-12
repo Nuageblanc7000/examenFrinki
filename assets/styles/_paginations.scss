@@ -1,0 +1,40 @@
+.navigation{
+width: 100%;
+margin-top:10px;
+margin-bottom: 10px;
+    .pagination{
+        padding:0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-title-main;
+        a{
+            color:black;
+        }
+    .arrow{
+        @extend .btn-cube-black;
+        padding: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        color:white !important;
+    }
+        .unavailable{
+           &:hover{
+             background-color: grey;  
+           }
+        }
+
+        .number{
+            padding:1.2rem;
+            border:1px solid black;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            color:$white;
+            background-color: $blue-mat;
+            
+        }
+
+        
+    }
+}

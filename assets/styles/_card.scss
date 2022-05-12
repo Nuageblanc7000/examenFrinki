@@ -1,5 +1,6 @@
 %card-frinki{
-    min-height:500px;
+    min-height:300px;
+    max-height: 550px;
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.274);
 }
 %info-frinki-card{
@@ -13,7 +14,6 @@
     padding:5px;
     color:$white;
 }
-
 .gaps
 {
     //margin: 0 auto;
@@ -24,7 +24,7 @@
 }
 .card-frinki{
     @extend %card-frinki;
-    background-color: $white;
+    background-color: $card-color;
     padding:0;
 
     .c-f-image{

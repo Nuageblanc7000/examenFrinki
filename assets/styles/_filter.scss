@@ -1,9 +1,13 @@
 .filterAd{
    background-color: $blue-mat;
-   position: sticky;
-   top:80px;
+   position: fixed;
+   top:-100%;
    left:0;
    right: 0;
+   overflow: hidden;
+   transition: 0.2s ease;
+   z-index: 200;
+
    form
    {
       background-color: transparent;
@@ -16,6 +20,16 @@
          display: flex;
          &{
             width:100%;
+         }
+         
+      }
+      #state{
+         border-radius: 5px;
+         padding:1rem;
+         option{
+            width: 100%;
+            padding:1rem;
+            overflow: hidden;
          }
       }
       input 
@@ -33,5 +47,63 @@
       }
       }
 
+   }
+}
+
+.showFilter{
+   top:80px;
+}
+.btnFilter{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 400;
+   position: fixed;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   cursor: pointer;
+   background-color: $blue-mat;
+   bottom:50%;
+   right: 5%;
+   color:$white;
+   font-size: 20px;
+   &::before{
+      content: "";
+      z-index: -50;
+      position: absolute;
+      border-radius: 50%;
+      animation: pulsion infinite 4s ease-in-out;
+      user-select: none;
+      pointer-events: none;
+   
+   }
+   &::after{
+      content: "";
+      z-index: -50;
+      position: absolute;
+      border-radius: 50%;
+      animation: pulsion infinite 5s ease;
+      user-select: none;
+      pointer-events: none;
+   
+   }
+   @media (max-width:568px) {
+      bottom:12%;
+   right:0;
+   }
+}
+@keyframes pulsion {
+   from{
+      width: 0;
+      height: 0;
+      border:0px solid $orange;
+      opacity: 1;
+   }
+   to{
+      width: 180%;
+      height: 180%;
+      border:4px solid $orange;
+      opacity: 0;
    }
 }

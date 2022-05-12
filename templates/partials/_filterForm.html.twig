@@ -1,7 +1,8 @@
-{{form_start(form)}} 
-
-{{form_rest(form)}}
-<div class="form-group">
-	<button type="submit" class="btn-orange">rechercher</button> 
+{# permet de créer mon rendu de mes filtres #}
+<div class="filterAd">
+	<div class="container"> {{form_start(form)}} {{form_rest(form)}}
+		<div class="form-group">
+			<button type="submit" class="btn-orange">Filtrer</button>
+		</div> {{form_end(form)}}
+	</div>
 </div>
-    {{form_end(form)}}

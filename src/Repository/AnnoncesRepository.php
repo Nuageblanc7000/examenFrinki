@@ -52,7 +52,7 @@ class AnnoncesRepository extends ServiceEntityRepository
 
             {
                $query = $query
-                ->where('a.description LIKE :search' )
+                ->where('a.title LIKE :search' )
                 ->setParameter('search', "%{$search->getSearch()}%")
                 ;
             }
