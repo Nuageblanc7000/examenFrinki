@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Data\DataFilter;
 use App\Entity\Annonces;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -41,18 +42,28 @@ class AnnoncesRepository extends ServiceEntityRepository
 
 
 
-    public function findByFilter($price)
+    public function findByFilter(?DataFilter $search) : array
     {
         $query = $this
             ->createQueryBuilder('a')
             ->select('a');
-            if($price)
+
+            if(!empty($search->getSearch()))
+
             {
                $query = $query
-               ->andWhere('a.price >= :price' )
-                ->setParameter('price',$price)
+                ->where('a.description LIKE :search' )
+                ->setParameter('search', "%{$search->getSearch()}%")
                 ;
             }
+            if(!empty($search->getState()))
+            {
+               $query = $query
+                ->andWhere('a.state = :state' )
+                ->setParameter('state', $search->getState())
+                ;
+            }
+            
             return  $query->getQuery()->getResult();
              
     }

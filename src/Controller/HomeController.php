@@ -21,8 +21,7 @@ class HomeController extends AbstractController
     {
         $price=90;
         return $this->render('home/home.html.twig', [
-            'annonces' => $repo->findByFilter($price),
-            // 'annonces' => $repo->findBy([],['createdAt' => 'DESC'],3)
+            'annonces' => $repo->findBy([],['createdAt' => 'DESC'],3)
         ]);
     }
     #[Route('/', name: 'more')]

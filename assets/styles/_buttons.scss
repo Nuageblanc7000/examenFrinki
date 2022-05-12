@@ -6,6 +6,7 @@
     transition: $btn-trans;
     color:$color-font;
     background: $btn-background;
+    cursor: pointer;
     &:hover{
         background: $orange;
         color:$btn-text-color-hover;

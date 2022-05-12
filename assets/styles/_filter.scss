@@ -1,38 +1,37 @@
-.filter{
-  form
-  {
+.filterAd{
+   background-color: $blue-mat;
+   position: sticky;
+   top:80px;
+   left:0;
+   right: 0;
+   form
+   {
+      background-color: transparent;
       display: flex;
       flex-direction: column;
-      .content-input{
-        display: flex; 
-        border:3px solid $white;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        margin:1rem 0 1rem 0;
-        i{
-            font-size: 2rem;
-            color:$white;
+      justify-content: center;
+      padding:10px;
+      .form-group{
+         margin: 5px 0px 5px 0px;
+         display: flex;
+         &{
+            width:100%;
          }
-         input{
-             width: 100%;
-             border-radius: 10px;
-             border:none;
+      }
+      input 
+      {
+         color:white;
+         border:1px solid $orange;
+         border-radius: 5px;
+         padding:10px;
+         background:transparent;
+      &::placeholder{
+         color:white;
+      }
+      &:focus{
+         border:none;
+      }
+      }
 
-            }
-            input:not(input[type="submit"]){
-               color:$white;
-               padding:0.8rem;
-               width: 100%;
-               border:none;
-               // margin:0.5rem 0 0.5rem 0;
-               background-color: transparent;
-               
-               &:focus{
-                  outline: none;
-               }
-           }
-     }
-
-  }
+   }
 }
