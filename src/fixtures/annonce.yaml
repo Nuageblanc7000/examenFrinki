@@ -1,9 +1,13 @@
+App\Entity\Category:
+  category{1..3}:
+    title: <randDomCat()>
 App\Entity\Annonces:
   annonce{1..100}:
-    title: <title()>
+    title: <randomTitle()>
     description: <text()>
     price: <numberBetween(5,100)>
     state: "neuf"
     city: <city()>
     delivry: "envoi"
     coverImage: "https://picsum.photos/<numberBetween(5,200)>/500"
+    category: '@category*'

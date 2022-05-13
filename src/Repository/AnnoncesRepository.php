@@ -46,14 +46,22 @@ class AnnoncesRepository extends ServiceEntityRepository
     {
         $query = $this
             ->createQueryBuilder('a')
-            ->select('a');
+            ->select('a','c')
+            ->leftJoin('a.category','c')
+            ;
 
             if(!empty($search->getSearch()))
-
             {
                $query = $query
-                ->where('a.title LIKE :search' )
+                ->andWhere('a.title LIKE :search' )
                 ->setParameter('search', "%{$search->getSearch()}%")
+                ;
+            }
+            if(!empty($search->getCat()))
+            {
+                $query = $query
+                ->andWhere('c.id IN (:category)' )
+                ->setParameter('category', $search->getCat())
                 ;
             }
             if(!empty($search->getState()))

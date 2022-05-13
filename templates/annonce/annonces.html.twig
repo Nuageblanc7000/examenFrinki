@@ -7,31 +7,32 @@
 	{% include "partials/_filterForm.html.twig" %}
 	<div class="container mt-5 rela">
 		<div class="row rela vh100">
-			<div class="grid-auto grid-center">
+			<div class="grid-auto grid-center vh100">
 				{% if annonces|length > 0 %}
 					{% for annonce in annonces %}
 
 						{% include "partials/_cards.html.twig" %}
 					{% endfor %}
 				{% else %}
-					<div class="not-annonce">
-					<h4 >Aucun Résultat</h4>
-					<img src="{{asset("/build/images/not-annonce.jpg")}}" alt="">
-					<a class="btn-blue" href="{{path('annonces')}}">Voir tout les articles</a>
+					<div class="center">
+						<div class="not-annonce">
+							<h4>Aucun Résultat</h4>
+							<figure>
+								<img src="{{asset("/build/images/not-annonce.jpg")}}" alt="">
+							</figure>
+							<a class="btn-blue" href="{{path('annonces')}}">Voir tout les articles</a>
+						</div>
 					</div>
 				{% endif %}
 			</div>
 
-			<div class="navigation"> 
-			{{ knp_pagination_render(annonces) }}
+			<div class="navigation"> {{ knp_pagination_render(annonces) }}
 			</div>
 		</div>
 		<div class="btnFilter">
-			<i class='bx bx-filter-alt' ></i>
+			<i class='bx bx-filter-alt'></i>
 		</div>
 	</div>
 {% endblock %}
-{% block javascripts %} 
-	{{ parent() }}
-	{{ encore_entry_script_tags('filter') }}
+{% block javascripts %} {{ parent() }} {{ encore_entry_script_tags('filter') }}
 {% endblock %}

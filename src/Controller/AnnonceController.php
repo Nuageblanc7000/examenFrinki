@@ -15,7 +15,7 @@ class AnnonceController extends AbstractController
 {
     #[Route('/annonces', name: 'annonces')]
     /**
-     * Permet d'afficher et une pagniation et de créer un formulaire de filtrage
+     * Permet d'afficher et une paginiation et de créer un formulaire de filtrage
      *
      * @param AnnoncesRepository $repo
      * @param Request $req
@@ -23,7 +23,10 @@ class AnnonceController extends AbstractController
      * @return Response
      */
     public function index(AnnoncesRepository $repo, Request $req,PaginatorInterface $paginator): Response
-    {
+    {   /**
+        * @var Datafilter 
+        * cette objet va permettre de stocker les données du filtre pour les envoyer par la suite dans mon querryBuilder pour mon filtre
+        */
         $data = new DataFilter();
         $form = $this->createForm(FilterAnnonceType::class, $data);
         $form->handleRequest($req);
@@ -36,5 +39,5 @@ class AnnonceController extends AbstractController
         ]);
     }
 
-   
+//    #[Route('/annonces/{slug}')]
 }

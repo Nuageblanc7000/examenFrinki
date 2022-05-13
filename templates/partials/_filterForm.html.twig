@@ -1,8 +1,22 @@
 {# permet de créer mon rendu de mes filtres #}
 <div class="filterAd">
-	<div class="container"> {{form_start(form)}} {{form_rest(form)}}
+	<div class="container"> 
+	{{form_start(form)}} 
+		{{form_row(form.search , {'attr': {'class': 'form-group'}})}}
+		<div class="form-group">
+		{{form_row(form.state )}}
+		{{form_row(form.cat )}}
+		</div>
+
 		<div class="form-group">
 			<button type="submit" class="btn-orange">Filtrer</button>
-		</div> {{form_end(form)}}
+		</div> 
+		
+		<div class="form-group error">
+		{{form_errors(form.cat)}}
+		</div>
+		
+		{{form_end(form)}}
+
 	</div>
 </div>

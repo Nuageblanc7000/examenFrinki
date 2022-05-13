@@ -1,24 +1,31 @@
-.not-annonce
-{
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  .not-annonce {
     align-self: center;
     display: flex;
-    padding:1rem;
+    padding: 1rem;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    max-width: 100%;
+    width: 400px;
     min-width: 300px;
-    height: 300px;
-    box-shadow: $shadow-blue;
-
-    h4{
-        font-family: $font-title-main;
-
+    height: 400px;
+    min-height: 300px;
+    // @media (min-width: 768px) {
+    //   box-shadow: $shadow-blue;
+    // }
+    border-radius: 50%;
+    h4 {
+      font-family: $font-title-main;
     }
-    img{
-        object-fit: cover;
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
+    img {
+      object-fit: cover;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
     }
+  }
 }

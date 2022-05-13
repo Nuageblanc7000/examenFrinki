@@ -17,14 +17,17 @@
       padding:10px;
       .form-group{
          margin: 5px 0px 5px 0px;
-         display: flex;
+         display: flex; 
+         justify-content: center;
+         align-items: center;
          &{
             width:100%;
          }  
       }
-      #state{
+      #state, #cat{
          border-radius: 5px;
          padding:1rem;
+         flex-grow: 1 0;
          option{
             width: 100%;
             padding:1rem;
@@ -94,8 +97,8 @@
    
    }
    @media (max-width:568px) {
-      bottom:12%;
-   right:0;
+      bottom:15%;
+   right:10%;
    }
 }
 @keyframes pulsion {
@@ -120,4 +123,9 @@
    to{
     transform: scale(1.4);
    }
+}
+
+.error{
+   font-size: 2rem;
+   color:red;
 }

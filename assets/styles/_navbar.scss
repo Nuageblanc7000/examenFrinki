@@ -141,7 +141,7 @@ header {
 }
 .btn-nav-h {
   @extend %btn;
-  color: black;
+  color: $blue-mat;
   font-size: 2rem;
   right: -10px;
   top: 30px;
@@ -161,5 +161,6 @@ header {
   transform: rotate(-30deg);
   opacity: 1;
   z-index: 50;
-  top: 60px;
+  top: 65px;
+
 }

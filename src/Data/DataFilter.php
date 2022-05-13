@@ -19,6 +19,8 @@ final class DataFilter {
 
     private  $state;
 
+    private $cat;
+
     
     public function getPage(): ?int
     {   
@@ -71,6 +73,16 @@ final class DataFilter {
         $this->price = $price;
 
         return $this;
+    }
+    public function getCat()
+    {
+        return $this->cat;
+    }
+    public function setCat($cat)
+    {
+        $this->cat = $cat;
+
+        return $this->cat;
     }
 }
 
