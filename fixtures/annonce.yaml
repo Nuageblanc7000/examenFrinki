@@ -1,5 +1,5 @@
 App\Entity\Annonces:
-  annonce{1..10}:
+  annonce{1..100}:
     title: <title()>
     description: <text()>
     price: <numberBetween(5,100)>

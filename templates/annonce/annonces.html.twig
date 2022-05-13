@@ -7,14 +7,18 @@
 	{% include "partials/_filterForm.html.twig" %}
 	<div class="container mt-5 rela">
 		<div class="row rela vh100">
-			<div class="grid-auto">
+			<div class="grid-auto grid-center">
 				{% if annonces|length > 0 %}
 					{% for annonce in annonces %}
 
 						{% include "partials/_cards.html.twig" %}
 					{% endfor %}
 				{% else %}
-					<h4>Aucun Résultat</h4>
+					<div class="not-annonce">
+					<h4 >Aucun Résultat</h4>
+					<img src="{{asset("/build/images/not-annonce.jpg")}}" alt="">
+					<a class="btn-blue" href="{{path('annonces')}}">Voir tout les articles</a>
+					</div>
 				{% endif %}
 			</div>
 

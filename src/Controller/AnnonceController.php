@@ -14,18 +14,27 @@ use Symfony\Component\Routing\Annotation\Route;
 class AnnonceController extends AbstractController
 {
     #[Route('/annonces', name: 'annonces')]
+    /**
+     * Permet d'afficher et une pagniation et de créer un formulaire de filtrage
+     *
+     * @param AnnoncesRepository $repo
+     * @param Request $req
+     * @param PaginatorInterface $paginator
+     * @return Response
+     */
     public function index(AnnoncesRepository $repo, Request $req,PaginatorInterface $paginator): Response
     {
         $data = new DataFilter();
         $form = $this->createForm(FilterAnnonceType::class, $data);
         $form->handleRequest($req);
-        $page = $data->setPage($req->query->getInt('page',1));
         $dat = $repo->findByFilter($data);
-        $pagination = $paginator->paginate($dat,$page->getPage(),8);
-
+        $page = $req->query->getInt('page',1);
+        $pagination = $paginator->paginate($dat,$page,8);
         return $this->render('annonce/annonces.html.twig', [
             'form' => $form->createView(),
             'annonces'  => $pagination
         ]);
     }
+
+   
 }

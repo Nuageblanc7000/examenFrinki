@@ -32,9 +32,14 @@ margin-bottom: 10px;
             margin-left: 1rem;
             color:$white;
             background-color: $blue-mat;
+            box-shadow: $shadow-black;
             
         }
 
         
     }
+}
+
+.numberNotSelect{
+    padding:0.5rem;
 }
