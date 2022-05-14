@@ -41,6 +41,16 @@ class Annonces
     #[ORM\JoinColumn(nullable: false)]
     private $category;
 
+    #[ORM\Column(type: 'string', length: 150)]
+    private $color;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $brand;
+
+    #[ORM\ManyToOne(targetEntity: SubCategory::class, inversedBy: 'annonces')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $subCategory;
+
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
@@ -154,6 +164,42 @@ class Annonces
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): self
+    {
+        $this->color = $color;
+
+        return $this;
+    }
+
+    public function getBrand(): ?string
+    {
+        return $this->brand;
+    }
+
+    public function setBrand(?string $brand): self
+    {
+        $this->brand = $brand;
+
+        return $this;
+    }
+
+    public function getSubCategory(): ?SubCategory
+    {
+        return $this->subCategory;
+    }
+
+    public function setSubCategory(?SubCategory $subCategory): self
+    {
+        $this->subCategory = $subCategory;
 
         return $this;
     }
