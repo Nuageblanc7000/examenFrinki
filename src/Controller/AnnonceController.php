@@ -3,13 +3,15 @@
 namespace App\Controller;
 
 use App\Data\DataFilter;
+use App\Entity\Annonces;
 use App\Form\FilterAnnonceType;
 use App\Repository\AnnoncesRepository;
 use Knp\Component\Pager\PaginatorInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AnnonceController extends AbstractController
 {
@@ -36,8 +38,17 @@ class AnnonceController extends AbstractController
         return $this->render('annonce/annonces.html.twig', [
             'form' => $form->createView(),
             'annonces'  => $pagination
-        ]);
+        ])
+        ;
     }
-
-//    #[Route('/annonces/{slug}')]
+    #[Route('/annonces/{id}', name:'annonce',priority:1)]
+    public function Annonce(Annonces $ad): Response
+    {
+        return $this->render('annonce/annonce.html.twig',
+        [
+            'ad' => $ad
+        ]) 
+        ;
+    }
+    
 }

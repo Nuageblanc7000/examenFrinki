@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AnnonceController!
+{% block title %}
+Annonces - Frinki
 {% endblock %}
 
 {% block body %}
 	{% include "partials/_filterForm.html.twig" %}
-	<div class="container mt-5 rela">
+	<div class="container rela">
 		<div class="row rela vh100">
 			<div class="grid-auto grid-center vh100">
 				{% if annonces|length > 0 %}
 					{% for annonce in annonces %}
-
 						{% include "partials/_cards.html.twig" %}
 					{% endfor %}
 				{% else %}

@@ -1,0 +1,107 @@
+{% extends "base.html.twig" %}
+
+
+{% block title %} {{ad.title}}
+{% endblock %}
+
+{% block body %}
+	<section class="container pt-5">
+		<div class="row">
+			<section class="col-lg-9 annonce-main-container">
+				<figure>
+					<img src="{{ad.coverImage}}" alt="">
+				</figure>
+                {% if app.user %}
+                    
+				<nav class="user-nav">
+					<ul>
+						<li>
+                        <a class="modify" href="">{% trans %}Modify{% endtrans %}</a>
+                        </li>
+                        <li>
+                        <a  class="delete" href="">{% trans %} Delete {% endtrans %}</a>
+                        </li>
+					</ul>
+				</nav>
+                {% endif %}
+				<article>
+					<h3>Description</h3>
+					<p> {{ad.description}}
+					</p>
+				</article>
+			</section>
+			<aside class="col-lg-3  annonce-info-container">
+				<div class="user-info">
+					<a class="" href="#">
+						<figure>
+							<img class="badge-user" src="/build/images/test.png" alt="">
+							<figcaption class="">Sara Boudhan</figcaption>
+						</figure>
+					</a>
+				</div>
+				<div class="info-annonce">
+					<article class="d-flex center-center">
+						<h5>
+							{% trans %}
+							state
+							{% endtrans %}
+							:</h5>
+						<p>{{ad.state}}</p>
+					</article>
+
+					<article class="d-flex center-center ">
+						<h5>
+							{% trans %}Price
+							{% endtrans %}
+							:
+						</h5>
+						<p>{{ad.price}}
+							€</p>
+					</article>
+					<article class="d-flex center-center py-2">
+						<h5>
+							{% trans %}localization
+							{% endtrans %}
+							:</h5>
+						<p>{{ad.city}}</p>
+					</article>
+					<article class="d-flex center-center ">
+						<h5>
+							{% trans %}gender{% endtrans %}
+							:
+						</h5>
+						<p>{{ad.category.title}}</p>
+					</article>
+					<article class="d-flex center-center">
+						<h5>
+							{% trans %}delivry{% endtrans %}
+							:
+						</h5>
+						<p>{{ad.delivry}}</p>
+					</article>
+
+					{# {{dump(ad)}} #}
+				</div>
+               
+                {% if  not app.user and is_granted('user') %}
+                 
+                        
+				<form action="" class="d-flex flex-column contact">
+					<textarea name="" id="" cols="30" rows="10">{% trans %}Bonjour, j'aimerais en savoir plus sur
+						{% endtrans %}'{{ad.title}}'</textarea>
+					<input class="btn-blue mt-2" type="submit" value="Envoyer">
+				</form>
+                 {% elseif not is_granted('user') and not app.user %} 
+                 <div class="user-not-c-a">
+                 <a class="btn-blue" href="{{path('home')}}">Contacter</a>
+                 </div>
+                {% endif %}
+			</aside>
+			<div class="col-12">
+            <div class="grid-auto">
+				{# {% for item in items %}{% endfor %} #}
+            </div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
