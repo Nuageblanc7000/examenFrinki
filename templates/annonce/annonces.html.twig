@@ -6,7 +6,7 @@ Annonces - Frinki
 
 {% block body %}
 	{% include "partials/_filterForm.html.twig" %}
-	<div class="container rela">
+	<div class="container rela pt80">
 		<div class="row rela vh100">
 			<div class="grid-auto grid-center vh100">
 				{% if annonces|length > 0 %}
@@ -16,17 +16,18 @@ Annonces - Frinki
 				{% else %}
 					<div class="center">
 						<div class="not-annonce">
-							<h4>Aucun Résultat</h4>
+							<h4>{% trans %}No result{% endtrans %}</h4>
 							<figure>
 								<img src="{{asset("/build/images/not-annonce.jpg")}}" alt="">
 							</figure>
-							<a class="btn-blue" href="{{path('annonces')}}">Voir tout les articles</a>
+							<a class="btn-blue" href="{{path('annonces')}}">{% trans %}View all ads{% endtrans %}</a>
 						</div>
 					</div>
 				{% endif %}
 			</div>
 
-			<div class="navigation"> {{ knp_pagination_render(annonces) }}
+			<div class="navigation"> 
+			{{ knp_pagination_render(annonces) }}
 			</div>
 		</div>
 		<div class="btnFilter">
@@ -34,5 +35,6 @@ Annonces - Frinki
 		</div>
 	</div>
 {% endblock %}
-{% block javascripts %} {{ parent() }} {{ encore_entry_script_tags('filter') }}
+{% block javascripts %} {{ parent() }} 
+{{ encore_entry_script_tags('filter') }}
 {% endblock %}

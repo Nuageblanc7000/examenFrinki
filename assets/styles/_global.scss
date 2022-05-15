@@ -11,6 +11,10 @@
 .vh50{
     min-height:100vh;
 }
+//padding top
+.pt80{
+    padding-top:100px;
+}
 .spacer-m-xy{
     margin-top:3rem;
     margin-bottom:3rem;
@@ -79,6 +83,9 @@
 .grid-center{
     justify-content: center;
     align-items: center;
+}
+.grid-row-auto{
+    grid-template-rows: repeat(auto-fil,minmax(300px,400px));
 }
 .col-reverse{
     flex-direction: column-reverse;

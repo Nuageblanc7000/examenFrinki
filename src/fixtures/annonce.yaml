@@ -1,13 +1,26 @@
 App\Entity\Category:
   category{1..3}:
     title: <randDomCat()>
+
+App\Entity\SubCategory:
+  subcategory:{1..3}:
+    title: <randDomSubCat(1)>  
 App\Entity\Annonces:
-  annonce{1..100}:
+  annonce{1..30}:
     title: <randomTitle()>
     description: <text()>
     price: <numberBetween(5,100)>
     state: "neuf"
     city: <city()>
     delivry: "envoi"
-    coverImage: "https://picsum.photos/<numberBetween(5,200)>/500"
+    color: <safeColorName()>
+    brand: "addidas"
+    coverImage: "https://picsum.photos/<numberBetween(1200,1400)>/500"
     category: '@category*'
+    subCategory: '@subcategory*'
+    addImage: '@image*'
+
+App\Entity\Image:
+  image{5..80}:
+    name: "https://picsum.photos/<numberBetween(1200,1400)>/<numberBetween(500,800)>"
+    annonces: '@annonce*'

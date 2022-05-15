@@ -6,6 +6,7 @@ use App\Data\DataFilter;
 use App\Entity\Annonces;
 use App\Form\FilterAnnonceType;
 use App\Repository\AnnoncesRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -50,5 +51,21 @@ class AnnonceController extends AbstractController
         ]) 
         ;
     }
-    
+
+    #[Route('/annonces/{id}/edit', name:'annonce_edit')]
+    public function annonceEdit(Annonces $ad,Request $req,EntityManagerInterface $em): Response
+    {   
+        $form= $this->createForm(AnnonceEditType::class,$ad);
+        $form->handleRequest($req);
+
+        if($form->isSubmitted() &&  $form->isValid())
+        {
+            $em->flush();
+        }
+        return $this->render('annonce/edit.html.twig',
+        [
+            'ad' => $ad
+        ]) 
+        ;
+    }
 }

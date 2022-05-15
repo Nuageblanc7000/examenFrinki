@@ -27,7 +27,16 @@ class _RandomsProvider extends Base
   public function randDomCat() : string
   {
       $randTab = ['femme','homme','enfant'];
+      for($i = 1; $i < count($randTab); $i++){
+        return $randTab[$i];
+      }
+  }
 
-    return $randTab[array_rand($randTab,1)];
+  public function randDomSubCat($i) : string
+  {
+      $randTab = ['chaussure','pull','veste'];
+      $i++;
+
+      return $randTab[$i];
   }
 }

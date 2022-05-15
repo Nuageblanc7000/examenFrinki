@@ -2,9 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\AnnoncesRepository;
 use Doctrine\ORM\Mapping as ORM;
-
+use App\Repository\AnnoncesRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 #[ORM\Entity(repositoryClass: AnnoncesRepository::class)]
 class Annonces
 {
@@ -51,9 +52,13 @@ class Annonces
     #[ORM\JoinColumn(nullable: false)]
     private $subCategory;
 
+    #[ORM\OneToMany(mappedBy: 'annonces', targetEntity: Image::class, orphanRemoval: true)]
+    private $image;
+
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
+        $this->image = new ArrayCollection();
     }
     public function getId(): ?int
     {
@@ -197,9 +202,41 @@ class Annonces
         return $this->subCategory;
     }
 
+    
+
     public function setSubCategory(?SubCategory $subCategory): self
     {
         $this->subCategory = $subCategory;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Image>
+     */
+    public function getImage(): Collection
+    {
+        return $this->image;
+    }
+
+    public function addImage(Image $image): self
+    {
+        if (!$this->image->contains($image)) {
+            $this->image[] = $image;
+            $image->setAnnonces($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Image $image): self
+    {
+        if ($this->image->removeElement($image)) {
+            // set the owning side to null (unless already changed)
+            if ($image->getAnnonces() === $this) {
+                $image->setAnnonces(null);
+            }
+        }
 
         return $this;
     }

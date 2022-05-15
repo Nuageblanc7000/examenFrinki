@@ -1,50 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
+      <trans-unit id="JBkykGe" resname="search">
+        <source>search</source>
+        <target>__search</target>
+      </trans-unit>
+      <trans-unit id="_DkWE1U" resname="used">
+        <source>used</source>
+        <target>__used</target>
+      </trans-unit>
       <trans-unit id="EVB6Di9" resname="new">
         <source>new</source>
-        <target>nouvelle</target>
+        <target>__new</target>
       </trans-unit>
-      <trans-unit id="cLozcIy" resname="ad">
-        <source>ad</source>
-        <target>annonce</target>
+      <trans-unit id="AArdk9G" resname="like new">
+        <source>like new</source>
+        <target>__like new</target>
       </trans-unit>
-      <trans-unit id="pCYuHJv" resname="about">
-        <source>about</source>
-        <target>à propos</target>
+      <trans-unit id="2U6vaUO" resname="Modify">
+        <source>Modify</source>
+        <target>__Modify</target>
       </trans-unit>
-      <trans-unit id="RM9v.h6" resname="Useful links">
-        <source>Useful links</source>
-        <target>liens utiles</target>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>__Delete</target>
       </trans-unit>
-      <trans-unit id="9Capzra" resname="Frinki is an ad service&#10;&#9;&#9;&#9;&#9;&#9;created on 05/10/2022 in Belgium">
-        <source>Frinki is an ad service
-					created on 05/10/2022 in Belgium</source>
-        <target>Frinki est un service d'annonce crée le 10/05/2022 en Belgique</target>
+      <trans-unit id="S6aXNcp" resname="state">
+        <source>state</source>
+        <target>__state</target>
       </trans-unit>
-      <trans-unit id="vcE4eGz" resname="2022 Created by Wetterene Rémy">
-        <source>2022 Created by Wetterene Rémy</source>
-        <target>2022 Création Wetterene Rémy</target>
+      <trans-unit id="k8kchR5" resname="Price">
+        <source>Price</source>
+        <target>__Price</target>
       </trans-unit>
-      <trans-unit id="KXRm1Nb" resname="General user condition">
-        <source>General user condition</source>
-        <target>condition générale utilisateur</target>
+      <trans-unit id="o8rLdVB" resname="localization">
+        <source>localization</source>
+        <target>__localization</target>
+      </trans-unit>
+      <trans-unit id="3p.q6ot" resname="gender">
+        <source>gender</source>
+        <target>__gender</target>
+      </trans-unit>
+      <trans-unit id="KSwG8AR" resname="Category">
+        <source>Category</source>
+        <target>__Category</target>
+      </trans-unit>
+      <trans-unit id="a3MZGgp" resname="Color">
+        <source>Color</source>
+        <target>__Color</target>
+      </trans-unit>
+      <trans-unit id="uuUv999" resname="delivry">
+        <source>delivry</source>
+        <target>__delivry</target>
+      </trans-unit>
+      <trans-unit id="qDyf3_n" resname="Bonjour, j'aimerais en savoir plus sur">
+        <source>Bonjour, j'aimerais en savoir plus sur</source>
+        <target>__Bonjour, j'aimerais en savoir plus sur</target>
+      </trans-unit>
+      <trans-unit id="LfqLBUG" resname="edit ad">
+        <source>edit ad</source>
+        <target>__edit ad</target>
       </trans-unit>
       <trans-unit id="rTY8dvF" resname="Frinki Your Free Ad Service">
         <source>Frinki Your Free Ad Service</source>
-        <target>Frinki votre service</target>
+        <target>__Frinki Your Free Ad Service</target>
       </trans-unit>
       <trans-unit id="lWSn.aB" resname="Ad Service">
         <source>Ad Service</source>
-        <target>d'annonce gratuite</target>
+        <target>__Ad Service</target>
       </trans-unit>
       <trans-unit id="Tvyg0Qx" resname="About">
         <source>About</source>
-        <target>A propos</target>
+        <target>__About</target>
       </trans-unit>
       <trans-unit id="EtrXXW." resname="Frinki is above all">
         <source>Frinki is above all</source>
@@ -56,35 +87,47 @@
       </trans-unit>
       <trans-unit id="0gMSvIA" resname="learn more">
         <source>learn more</source>
-        <target>en savoir plus</target>
+        <target>__learn more</target>
+      </trans-unit>
+      <trans-unit id="cLozcIy" resname="ad">
+        <source>ad</source>
+        <target>__ad</target>
       </trans-unit>
       <trans-unit id="bTOSoPA" resname="look ad">
         <source>look ad</source>
-        <target>voir l'annonce</target>
+        <target>__look ad</target>
       </trans-unit>
       <trans-unit id=".G5Y2Dx" resname="rescent">
         <source>rescent</source>
-        <target>réscente</target>
+        <target>__rescent</target>
+      </trans-unit>
+      <trans-unit id="pCYuHJv" resname="about">
+        <source>about</source>
+        <target>__about</target>
+      </trans-unit>
+      <trans-unit id="vcE4eGz" resname="2022 Created by Wetterene Rémy">
+        <source>2022 Created by Wetterene Rémy</source>
+        <target>__2022 Created by Wetterene Rémy</target>
+      </trans-unit>
+      <trans-unit id="KXRm1Nb" resname="General user condition">
+        <source>General user condition</source>
+        <target>__General user condition</target>
       </trans-unit>
       <trans-unit id="ACcM9j_" resname="logout">
         <source>logout</source>
-        <target>Déconnexion</target>
-      </trans-unit>
-      <trans-unit id="JBkykGe" resname="search">
-        <source>search</source>
-        <target>Annonces</target>
-      </trans-unit>
-      <trans-unit id="SNfFCMw" resname="sign-in">
-        <source>sign-in</source>
-        <target>Inscription</target>
-      </trans-unit>
-      <trans-unit id="fwNIweL" resname="log in">
-        <source>log in</source>
-        <target>Connexion</target>
+        <target>__logout</target>
       </trans-unit>
       <trans-unit id="eOYiezy" resname="Annonces">
         <source>Annonces</source>
         <target>__Annonces</target>
+      </trans-unit>
+      <trans-unit id="SNfFCMw" resname="sign-in">
+        <source>sign-in</source>
+        <target>__sign-in</target>
+      </trans-unit>
+      <trans-unit id="fwNIweL" resname="log in">
+        <source>log in</source>
+        <target>__log in</target>
       </trans-unit>
     </body>
   </file>

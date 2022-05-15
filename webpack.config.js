@@ -23,6 +23,7 @@ Encore
     .addEntry('app', './assets/app.js')
     .addEntry('home', './assets/home.js')
     .addEntry('filter', './assets/filter.js')
+    .addEntry('slider', './assets/slider.js')
     /**
      * permet de copier mon dossiers images dans build eet le pattern de gérer les extensions autorisées et le to de spécifier ou stocker le fichier
      */

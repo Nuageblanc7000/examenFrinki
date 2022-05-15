@@ -4,16 +4,23 @@ namespace App\Form;
 
 use App\Data\DataFilter;
 use App\Entity\Category;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\FormEvents;
 
 class FilterAnnonceType extends AbstractType
 {
+    private $translator;
+    public function __construct(TranslatorInterface $translator)
+    {
+        $this->translator = $translator;
+    
+    }
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -21,7 +28,7 @@ class FilterAnnonceType extends AbstractType
                 'required' => false,
                 'label' => false,
                 'attr' => [
-                    'placeholder' =>'rechercher',
+                    'placeholder' =>  $this->translator->trans('search'),
                     'class' => 'form-group'
                 ]
             ])
@@ -29,9 +36,9 @@ class FilterAnnonceType extends AbstractType
                 'required' => false,
                 'label' => false,
                 'choices' => [
-                    'neuf' => 'neuf',
-                    'comme neuf' => 'comme neuf',
-                    'utilisé' => 'utilisé'
+                    $this->translator->trans('used') => 'utilisé',
+                    $this->translator->trans('new') =>  'neuf',
+                    $this->translator->trans('like new') => 'comme neuf'
 
                 ],
                 'attr' => [
